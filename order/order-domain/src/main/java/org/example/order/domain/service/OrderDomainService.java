@@ -1,9 +1,11 @@
 package org.example.order.domain.service;
 
+import jakarta.annotation.Resource;
 import org.example.order.domain.model.order.LockInventoryResponse;
 import org.example.order.domain.model.order.Order;
 import org.example.order.domain.model.order.OrderItem;
 import org.example.order.domain.model.product.Product;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Date;
@@ -16,7 +18,9 @@ import java.util.Optional;
  * @description:
  * @author: czqu
  **/
+@Service
 public class OrderDomainService {
+
     /**
      * 检查库存,组装订单项
      * @param orderItems
